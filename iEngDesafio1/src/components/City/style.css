@@ -1,0 +1,15 @@
+.cidade {
+    min-height:630px;
+}
+.dia {
+    background-color: #87ceeb;
+    transition: all 0.5s;
+    transition-timing-function: linear;
+    background-image: url("http://localhost:3000/assets/img/sky.svg"); 
+}
+.noite {
+    background-color: #0e0618;
+    transition: all 0.5s;
+    transition-timing-function: linear;
+    background-image: url("http://localhost:3000/assets/img/nightSky.svg");
+}

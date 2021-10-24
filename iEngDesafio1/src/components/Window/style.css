@@ -1,0 +1,25 @@
+.janela {
+    margin: 2px;
+    border:  2px solid black;
+    min-height: 100px;
+    cursor: pointer;
+}
+.ligada {
+    background-color: #ffff00 !important;
+    transition: all 1.5s !important;
+    transition-timing-function: ease !important;
+}
+.ligada i{
+    color: #fff;
+}
+.apagada {
+    color: black !important;
+    transition: all 0.5s !important;
+    
+}
+.apagada i{
+    transform: rotate(180deg);
+    color: black !important;
+}
+
+

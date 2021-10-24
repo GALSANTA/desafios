@@ -1,0 +1,8 @@
+.predio {
+    border: 5px solid #000000;
+    background-color: #9e9e9e;
+    opacity: 0.9;
+    min-height: 100px;
+    margin: 30px;
+    background-image: repeating-linear-gradient(90deg,#757575 10%,#616161 7%,#212121 14%);
+}
