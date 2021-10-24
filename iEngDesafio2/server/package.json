@@ -1,0 +1,23 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "API da aplicação",
+  "main": "index.js",
+  "author": "Fernando Marques",
+  "license": "ISC",
+  "scripts": {
+    "start": "start src/views/index.html&node index.js --production",
+    "development": "nodemon index.js --development"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mysql2": "^2.1.0",
+    "sequelize": "^6.3.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4",
+    "sequelize-cli": "^6.2.0"
+  }
+}

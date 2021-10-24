@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>PEQUENA APLICAÇÃO</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="indigo lighten-1">
+            <ul class="">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./lista.html">Lista</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container valign-wrapper" style="min-height: 300px;">
+        <div class="row ">
+            <form id="form" class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input id="name" type="text" class="validate">
+                        <label for="name">Nome</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">email</i>
+                        <input id="email" type="email" class="validate">
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+                <button id="enviar" class="btn waves-effect waves-light  indigo lighten-1" type="submit" name="action">Cadastrar
+                  <i class="material-icons right">submit</i>
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </script>
+    <script>
+        var enviar = document.getElementById("enviar");
+       
+        enviar.addEventListener("click", function(event) {
+            event.preventDefault();
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var json = {
+                "name":name,
+                "email": email,
+            }
+
+            let xhr = new XMLHttpRequest();
+            xhr.open('POST', "http://localhost:3333/", true);
+            xhr.setRequestHeader("Content-type", "application/json");
+
+            xhr.onreadystatechange = () => {
+
+                if (xhr.readyState == 4) {
+
+                    if (xhr.status == 200) {
+                        alert("Cadastrou");
+                        window.location.href="./lista.html";
+                    } else {
+                        console.log(xhr.responseText);
+                    }
+                }
+            }
+            xhr.send(JSON.stringify(json));
+
+        });
+    </script>
+</body>
+
+</html>
