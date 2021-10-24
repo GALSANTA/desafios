@@ -1,0 +1,38 @@
+.nav-tabs {
+    border-bottom: 0;
+}
+.UnderlineNav-item {
+    padding: 18px 6px;
+    font-size: 14px;
+    line-height: 25px;
+    color: #8b949e;
+    text-align: center;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid transparent;
+    text-decoration:none; 
+}
+
+.UnderlineNav-item:hover {
+    color: #c9d1d9;
+    border-bottom-width: 2px !important;
+    border-bottom-color: #c9d1d9 !important;
+}
+
+
+.UnderlineNav-item.selected {
+    font-weight: 600;
+    color: #c9d1d9;
+    border-bottom-color: #f9826c;
+    outline: 1px dotted transparent;
+    outline-offset: -1px;
+}
+
+@media screen and (max-width: 500px) {
+    .nav-tabs {
+        overflow-x: scroll;
+        overflow-y: scroll;
+        flex-direction: row;
+    }
+  }

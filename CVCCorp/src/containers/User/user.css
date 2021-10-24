@@ -1,0 +1,51 @@
+.img-avatar-fluid {
+    min-height: 105px;
+    min-width: 105px;
+    margin-top: -50px; 
+}
+.underline_none {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.title-name {
+    font-size: 26px;
+    max-width: 254px;
+    max-height: 64px;
+   
+}
+
+.title-login {
+    font-size: 20px;
+    max-width: 254px;
+    height: 24px;
+    
+}
+
+.bio {
+    font-size: 16px !important;
+}
+
+.profile {
+    padding: 0;
+    list-style: none;
+}
+.profile li {
+    font-size: 12px;
+}
+.h4 {
+    font-size: 16px!important;
+}
+div .me-2 a:hover {
+    color: #58a6ff !important; 
+}
+div .me-2 a:hover span {
+    color: #58a6ff !important; 
+}
+
+@media screen and (max-width:768px) {
+    .img-avatar-fluid {
+        margin-top: 0px; 
+    }
+}
